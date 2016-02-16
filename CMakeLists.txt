@@ -25,13 +25,14 @@ include_directories(${INCLUDE})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
-add_executable(real_sense   ${SRC}/main.cpp )
+add_executable(real_sense   ${SRC}/main.cpp 
+                            ${SRC}/r200.cpp)
 
-target_link_libraries(real_sense 	    ${OpenCV_LIBS} 
-										${PCL_LIBRARIES}
-										DSAPI
-										log4cpp
-										)
+target_link_libraries(real_sense 	${OpenCV_LIBS} 
+									${PCL_LIBRARIES}
+									DSAPI
+									log4cpp
+									)
 
 
 
